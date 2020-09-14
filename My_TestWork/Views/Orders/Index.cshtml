@@ -1,0 +1,37 @@
+﻿@using My_TestWork.Models;
+@model List<Order>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Number</th>
+        <th>Date Of Create</th>
+        <th>Date Of Shipment</th>
+        <th>Manager</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfCreate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfShipment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manager)
+            </td>
+        </tr>
+    }
+</table>
